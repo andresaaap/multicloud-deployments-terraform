@@ -1,12 +1,12 @@
 data "azurerm_resource_group" "example" {
-  name     = "Regroup_4gKqrgD_cn"
+  name     = "Regroup_4wTgLcE3NXl1LVe1"
 }
 
 ##### Your code starts here #####
 
 
 resource "azurerm_storage_account" "example" {
-  name                     = "tscottoudacitystorage"
+  name                     = "tscottoudacitystorageandres"
   resource_group_name      = data.azurerm_resource_group.example.name
   location                 = data.azurerm_resource_group.example.location
   account_tier             = "Standard"
@@ -22,7 +22,7 @@ resource "azurerm_service_plan" "example" {
 }
 
 resource "azurerm_windows_function_app" "example" {
-  name                = "tscotto-udacity-windows-function-app"
+  name                = "tscotto-udacity-windows-function-app-andres"
   resource_group_name = data.azurerm_resource_group.example.name
   location            = data.azurerm_resource_group.example.location
 
