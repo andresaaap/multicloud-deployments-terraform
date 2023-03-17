@@ -1,5 +1,5 @@
 data "azurerm_resource_group" "udacity" {
-  name     = "Regroup_4gKqrgD_cn"
+  name     = "Regroup_4wTgLcE3NXl1LVe1"
 }
 
 resource "azurerm_storage_account" "example" {
@@ -11,7 +11,7 @@ resource "azurerm_storage_account" "example" {
 }
 
 resource "azurerm_service_plan" "example" {
-  name                = "example-app-service-plan"
+  name                = "example-app-service-planan"
   resource_group_name = data.azurerm_resource_group.udacity.name
   location            = data.azurerm_resource_group.udacity.location
   os_type             = "Windows"
@@ -19,7 +19,7 @@ resource "azurerm_service_plan" "example" {
 }
 
 resource "azurerm_windows_function_app" "example" {
-  name                = "udacity-tscotto-windows-function-app"
+  name                = "udacity-tscotto-windows-function-appan"
   resource_group_name = data.azurerm_resource_group.udacity.name
   location            = data.azurerm_resource_group.udacity.location
 
@@ -36,7 +36,7 @@ resource "azurerm_windows_function_app" "example" {
 }
 
 resource "azurerm_kubernetes_cluster" "example" {
-  name                = "example-aks1"
+  name                = "example-aks1an"
   location            = data.azurerm_resource_group.udacity.location
   resource_group_name = data.azurerm_resource_group.udacity.name
   dns_prefix          = "exampleaks1"
